@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+
+
+App{
+    display: flex;
+    justify-content: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
