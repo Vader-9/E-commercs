@@ -1,8 +1,10 @@
-
+import Header from "./Header"
 function Home(){
 
     return(
-        <div>omo</div>
+        <div>
+            <Header/>
+        </div>
     )
 }
 export default Home
