@@ -1,8 +1,11 @@
+import Filters from "./Filters"
 
 function Collection(){
 
     return(
-        <div>Collection</div>
+        <div>
+            <Filters/>
+        </div>
     )
 }
 
