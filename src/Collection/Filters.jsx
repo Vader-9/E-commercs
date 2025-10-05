@@ -1,15 +1,21 @@
+import { useState } from "react"
+import { products } from "../assets/assets"
 
 function Filters(){
+
+    const [showProducts, setShowProducts] = useState(products)
+
+    
 
     return(
         <div className="px-[100px]">
             <div className="flex gap-[50px]">
                 <div>
                     <h1>Filters</h1>
-                    <div className="border p-[20px] mt-[40px]mb-[40px] w-[200px] h-[200px]">
+                    <div className="border p-[20px] mt-[40px] mb-[40px] w-[200px] h-[200px]">
                         <h3>CATEGORIES</h3>
                         <div>
-                            <input type="radio"/>
+                            <input type="radio" />
                             <p>Men</p>
                         </div>
                          <div>
@@ -21,7 +27,7 @@ function Filters(){
                             <p>Kids</p>
                         </div>
                     </div>
-                    <div className="border p-[20px] mt-[40px]mb-[40px] w-[200px] h-[200px]">
+                    <div className="border p-[20px] mt-[40px] mb-[40px] w-[200px] h-[200px]">
                         <h3>Types</h3>
                         <div>
                             <input type="radio"/>
@@ -45,7 +51,16 @@ function Filters(){
                             <input type="text" name="" id="" />
                         </div>
                     </div>
-                    <div>{}</div>
+                    <div className="grid grid-cols-5 grid-rows-2 gap-[20px] p-4 text-center justify-center">{
+                         showProducts.map((product) => (
+                            <div key={product._id}  >
+                                <img src={product.image} alt="" />
+                                <p>{product.name}</p>
+                                <p>{product.price}</p>
+                                <p>{product.category}</p>
+                            </div>
+                         )) 
+                        }</div> {console.log(showProducts.name)}
                 </div>
             </div>
         </div>
