@@ -16,7 +16,7 @@ function Best(){
                 <div key={best.id} className="border w-[200px]  ">
                        <img src={best.image} alt="no image availabe" />
                        <p>{best.name}</p>
-                       <p>{best.price}</p>
+                       <p>${best.price}</p>
                     </div>
             ))}
            </div>

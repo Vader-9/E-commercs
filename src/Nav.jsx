@@ -1,7 +1,7 @@
 import {assets} from './assets/assets'
 import { Link } from "react-router-dom"
 
-function Nav(){
+function Nav({setSearch}){
 
     return(
         <div className='flex items-center gap-[270px] justify-between py-2 font-medium '>
@@ -14,7 +14,7 @@ function Nav(){
                 <button>Admin panel</button>
             </div>
             <div className='flex gap-[10px]'>
-                <img src={assets.search_icon} alt="" />
+                <img src={assets.search_icon} alt=""  onClick={()=>setSearch(true)}/>
                 <img src={assets.profile_icon} alt="" />
                 <img src={assets.cart_icon} alt="" />
             </div>

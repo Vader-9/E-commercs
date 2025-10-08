@@ -1,10 +1,16 @@
 import Filters from "./Filters"
+//import Details from "./Details"
+import { useState } from "react"
+import { Link } from "react-router";
 
-function Collection(){
+function Collection({ search, setSearch }) {
 
-    return(
+    // Setting details
+   // const [details, setDetails] = useState(true)
+
+    return (
         <div>
-            <Filters/>
+            <Filters search={search} setSearch={setSearch}/>
         </div>
     )
 }
