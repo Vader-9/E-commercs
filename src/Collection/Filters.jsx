@@ -92,26 +92,26 @@ function Filters({ search, setSearch,}) {
                             <p>Men</p>
                         </div>
                         <div className="flex">
-                            <input type="radio" onClick={getWomenCloths} />
+                            <input type="checkbox" onClick={getWomenCloths} />
                             <p>Women</p>
                         </div>
                         <div className="flex">
-                            <input type="radio" onClick={getKidsCloths} />
+                            <input type="checkbox" onClick={getKidsCloths} />
                             <p>Kids</p>
                         </div>
                     </div>
                     <div className="border p-[20px] mt-[40px] mb-[40px] w-[200px] h-[200px]">
                         <h3>Types</h3>
                         <div className="flex">
-                            <input type="radio" onClick={setTopwears} />
+                            <input type="checkbox" onClick={setTopwears} />
                             <p>Topwear</p>
                         </div>
                         <div className="flex">
-                            <input type="radio" onClick={setBottompwears} />
+                            <input type="checkbox" onClick={setBottompwears} />
                             <p>Bottomwear</p>
                         </div>
                         <div className="flex">
-                            <input type="radio" onClick={setWinterwears} />
+                            <input type="checkbox" onClick={setWinterwears} />
                             <p>Winterwear</p>
                         </div>
                     </div>

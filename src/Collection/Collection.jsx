@@ -1,7 +1,6 @@
 import Filters from "./Filters"
 //import Details from "./Details"
-import { useState } from "react"
-import { Link } from "react-router";
+
 
 function Collection({ search, setSearch }) {
 

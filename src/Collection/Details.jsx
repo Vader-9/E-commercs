@@ -1,22 +1,42 @@
 import { useParams } from "react-router"
 import { products, assets } from "../assets/assets"
+import { useState } from "react"
 
-function Details() {
+function Details({ setAddToCart }) {
 
-    const { id } = useParams()
+    const { id, } = useParams()
 
     const product = products.find((item) => item._id === id)
+    // const related = products.map((item) => item.name === name )
 
-    console.log(product)
+    // console.log(product)
+
+    const [size, setSize] = useState('')
+
+    function setAddToCarts() {
+
+        if (size === '') {
+            alert('Please pick a size')
+        } else {
+            setAddToCart(prev => [
+                ...prev, {
+                    id: product._id,
+                    name: product.name,
+                    image: product.image,
+                    price: product.price,
+                    productSize: size
+                }])
+        }
+    }
 
     return (
-        <div>
-            <div>
+        <div className="flex justify-center ">
+            <div className="flex gap-[50px]">
                 <img src={product.image} alt="" />
                 <div>
                     <h1>Men Tapered Fit Flat-Front Trousers</h1>
-                    <div>
-                        <div>
+                    <div className="flex">
+                        <div className="flex">
                             <img src={assets.star_icon} alt="" />
                             <img src={assets.star_icon} alt="" />
                             <img src={assets.star_icon} alt="" />
@@ -27,12 +47,11 @@ function Details() {
                     </div>
                     <h1>Select Size</h1>
                     <div>
-                        <p>{product.sizes[0]}</p>
-                        <p>{product.sizes[1]}</p>
-                        <p>{product.sizes[2]}</p>
-                        <p>{product.sizes[3]}</p>
+                        <p onClick={() => setSize(product.sizes[0])}>{product.sizes[0]}</p>
+                        <p onClick={() => setSize(product.sizes[1])}>{product.sizes[1]}</p>
+                        <p onClick={() => setSize(product.sizes[2])}>{product.sizes[2]}</p>
                     </div>
-                    <button>ADD TO CART</button>
+                    <button onClick={setAddToCarts}>ADD TO CART</button>
                     <hr />
                 </div>
             </div>

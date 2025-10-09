@@ -7,23 +7,26 @@ import Collection from "./Collection/Collection";
 import About from "./About/About";
 import Contact from "./Contact/Contact";
 import Details from "./Collection/Details";
+import Cart from "./Cart";
 
 
 function App() {
 
   const [search, setSearch] = useState(false)
+  const [addToCart, setAddToCart] = useState([])
 
   return (
     <app>
       <div className='App'>
         <Router>
-          <Nav setSearch={setSearch} />
+          <Nav setSearch={setSearch} addToCart={addToCart} /> 
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="Collection" element={<Collection search={search} setSearch={setSearch} />}/>
               <Route path="About" element={<About/>}/>
               <Route path="Contact" element={<Contact/>}/>
-              <Route path="Details/:id" element={<Details/>}/>
+              <Route path="Details/:id" element={<Details setAddToCart={setAddToCart}/>}/>
+              <Route path="Cart" element={<Cart addToCart={addToCart} setAddToCart={setAddToCart}/>}/>
             </Routes>
           <Footer />
         </Router>
