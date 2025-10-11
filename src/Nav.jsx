@@ -15,7 +15,7 @@ function Nav({ setSearch, addToCart }) {
             </div>
             <div className='flex gap-[10px]'>
                 <img src={assets.search_icon} alt="" />
-                <img src={assets.profile_icon} alt="" />
+                <Link to = 'Profile'><img src={assets.profile_icon} alt="" /></Link>
                 <Link to='Cart'><div className="relative inline-block">
                     <img src={assets.cart_icon} alt="cart" className="w-8 h-8" />
                     {addToCart.length > 0 && (

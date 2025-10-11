@@ -8,6 +8,7 @@ import About from "./About/About";
 import Contact from "./Contact/Contact";
 import Details from "./Collection/Details";
 import Cart from "./Cart";
+import Login from "./Profile";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
               <Route path="Contact" element={<Contact/>}/>
               <Route path="Details/:id" element={<Details setAddToCart={setAddToCart}/>}/>
               <Route path="Cart" element={<Cart addToCart={addToCart} setAddToCart={setAddToCart}/>}/>
+              <Route path="Profile" element={<Login/>}/>
             </Routes>
           <Footer />
         </Router>

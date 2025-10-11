@@ -21,6 +21,7 @@ function Details({ setAddToCart }) {
             setAddToCart(prev => [
                 ...prev, {
                     id: product._id,
+                    uniqueid: Date.now(),
                     name: product.name,
                     image: product.image,
                     price: product.price,

@@ -1,6 +1,6 @@
 import { Trash2 } from 'lucide-react'
 import { useEffect, useState } from 'react'
-function Cart({addToCart, setAddToCart}){
+function Cart({ addToCart, setAddToCart }) {
 
     console.log(addToCart)
 
@@ -10,23 +10,25 @@ function Cart({addToCart, setAddToCart}){
     console.log(SubTotal)
 
     let shipping = 10
-    
- function removeChart(item){
-        setAddToCart(addToCart.filter((cart) => cart.id !== item.id))
+
+    function removeChart(item) {
+        setAddToCart(addToCart.filter((cart) => cart.uniqueid !== item.uniqueid))
     }
 
-    return(
+
+
+    return (
         <div>
             <h1>YOUR CART________</h1>
             {cartItems.map((item) => (
                 <div key={item.id}>
-                     <img src={item.image} alt="" />
-                     <div>
+                    <img src={item.image} alt="" />
+                    <div>
                         <h1>{item.name}</h1>
                         <p>${item.price}</p>
                         <button>{item.productSize}</button>
-                        <button onClick={()=>removeChart(item)}><Trash2 /></button>
-                     </div>
+                        <button onClick={() => removeChart(item)}><Trash2 /></button>
+                    </div>
                 </div>
             ))}
             <div>
