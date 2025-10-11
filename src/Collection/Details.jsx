@@ -1,6 +1,9 @@
 import { useParams } from "react-router"
 import { products, assets } from "../assets/assets"
 import { useState } from "react"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function Details({ setAddToCart }) {
 
@@ -16,7 +19,7 @@ function Details({ setAddToCart }) {
     function setAddToCarts() {
 
         if (size === '') {
-            alert('Please pick a size')
+            toast('Please pick a size')
         } else {
             setAddToCart(prev => [
                 ...prev, {
@@ -56,6 +59,7 @@ function Details({ setAddToCart }) {
                     <hr />
                 </div>
             </div>
+            <ToastContainer />
         </div>
     )
 }
