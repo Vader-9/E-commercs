@@ -18,7 +18,7 @@ function App() {
   const [addToCart, setAddToCart] = useState([])
 
   return (
-    <app>
+    <app className ='bg-gray-50'>
       <div className='App'>
         <Router>
           <Nav setSearch={setSearch} addToCart={addToCart} /> 

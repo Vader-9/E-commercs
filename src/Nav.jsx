@@ -14,8 +14,8 @@ function Nav({ setSearch, addToCart }) {
                 <button>Admin panel</button>
             </div>
             <div className='flex gap-[10px]'>
-                <img src={assets.search_icon} alt="" />
-                <Link to = 'Profile'><img src={assets.profile_icon} alt="" /></Link>
+                <Link to= 'Collection'><img src={assets.search_icon} alt="" onClick={()=> setSearch(true)} className="w-8 h-8"  /></Link>
+                <Link to = 'Profile'><img src={assets.profile_icon} alt=""  className="w-8 h-8"  /></Link>
                 <Link to='Cart'><div className="relative inline-block">
                     <img src={assets.cart_icon} alt="cart" className="w-8 h-8" />
                     {addToCart.length > 0 && (
