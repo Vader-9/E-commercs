@@ -9,6 +9,7 @@ import Contact from "./Contact/Contact";
 import Details from "./Collection/Details";
 import Cart from "./Cart";
 import Login from "./Profile";
+import Admin from "./Admin";
 
 
 
@@ -27,9 +28,10 @@ function App() {
               <Route path="Collection" element={<Collection search={search} setSearch={setSearch} />}/>
               <Route path="About" element={<About/>}/>
               <Route path="Contact" element={<Contact/>}/>
-              <Route path="Details/:id" element={<Details setAddToCart={setAddToCart}/>}/>
+              <Route path="Details/:id" element={<Details setAddToCart={setAddToCart} addToCart={addToCart}/>}/>
               <Route path="Cart" element={<Cart addToCart={addToCart} setAddToCart={setAddToCart}/>}/>
               <Route path="Profile" element={<Login/>}/>
+              <Route path="Admin" element ={<Admin/>}/>
             </Routes>
           <Footer />
         </Router>

@@ -11,7 +11,7 @@ function Nav({ setSearch, addToCart }) {
                 <Link to='Collection'>Collection</Link>
                 <Link to='About'>About</Link>
                 <Link to='Contact'>Contact</Link>
-                <button>Admin panel</button>
+                <Link to ="Admin"><button>Admin panel</button></Link>
             </div>
             <div className='flex gap-[10px]'>
                 <Link to= 'Collection'><img src={assets.search_icon} alt="" onClick={()=> setSearch(true)} className="w-8 h-8"  /></Link>

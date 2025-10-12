@@ -74,7 +74,7 @@ function Filters({ search, setSearch, }) {
     return (
         <div className="px-[100px]">
             {search && (
-  <div className="flex justify-center items-center w-full bg-white shadow-md py-4 px-6 gap-4 rounded-lg">
+  <div className="flex justify-center items-center w-full bg-white shadow-md py-4 px-6 gap-4 rounded-lg m-[10px]  fixed">
     <input
       type="text"
       value={searchItems}
@@ -131,7 +131,7 @@ function Filters({ search, setSearch, }) {
 
                         <div className="flex justify-space-between">
                             <h1>ALL COLLECTIONS_________</h1>
-                            <input type="text" name="" id="" />
+                            
                         </div>
                     </div>
                     <div className="bg-gray-50 py-10">
