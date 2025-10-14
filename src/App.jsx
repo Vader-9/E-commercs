@@ -18,7 +18,7 @@ import { getItem, setItem } from "./utiles/localStorage";
 function App() {
 
   const [search, setSearch] = useState(false)
-  const [active, setActive] = useState('active')
+  const [active, setActive] = useState('false')
 const [addToCart, setAddToCart] = useState(() => {
   const stored = getItem('addToCart');
   // make sure we always return an array
