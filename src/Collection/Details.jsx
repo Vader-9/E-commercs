@@ -78,10 +78,10 @@ function Details({ addToCart, setAddToCart }) {
           <p
             key={index}
             onClick={() => setSize(size)}
-            className={`cursor-pointer border px-4 py-2 rounded-md transition ${
+            className={`cursor-pointer border px-4 py-2 rounded-md transition  ${
               size === product.size
                 ? "bg-blue-500 text-white"
-                : "border-gray-300 hover:bg-gray-100"
+                : "border-gray-300 hover:bg-gray-100 active:bg-red-500"
             }`}
           >
             {size}
