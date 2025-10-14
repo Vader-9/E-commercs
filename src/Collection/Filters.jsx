@@ -74,13 +74,13 @@ function Filters({ search, setSearch, }) {
     return (
         <div className="px-[100px]">
             {search && (
-  <div className="flex justify-center items-center w-full bg-white shadow-md py-4 px-6 gap-4 rounded-lg m-[10px] ">
+  <div className="flex justify-center items-center w-full bg-white shadow-md py-4 px-6 gap-4 rounded-lg m-[10px] sm:w-full md:w-full lg:w-full ">
     <input
       type="text"
       value={searchItems}
       onChange={(e) => setSearchItems(e.target.value)}
       placeholder="Search products..."
-      className="w-2/3 md:w-1/2 border border-gray-300 rounded-full px-4 py-2 outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-200 transition-all duration-200"
+      className="w-2/3 md:w-1/2  border border-gray-300 rounded-full px-4 py-2 outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-200 transition-all duration-200"
     />
 
     <img
