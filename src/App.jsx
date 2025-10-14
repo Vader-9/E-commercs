@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Nav from "./Nav"
 import Footer from './Footer'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -11,14 +11,24 @@ import Cart from "./Cart";
 import Login from "./Profile";
 import Admin from "./Admin";
 import Sidebar from "./Sidebar";
+import { getItem, setItem } from "./utiles/localStorage";
 
 
 
 function App() {
 
   const [search, setSearch] = useState(false)
-  const [addToCart, setAddToCart] = useState([])
   const [active, setActive] = useState('active')
+const [addToCart, setAddToCart] = useState(() => {
+  const stored = getItem('addToCart');
+  // make sure we always return an array
+  return Array.isArray(stored) ? stored : [];
+});
+
+useEffect(() => {
+  setItem('addToCart', addToCart);
+}, [addToCart]);
+
 
   return (
     <app className ='bg-gray-50'>

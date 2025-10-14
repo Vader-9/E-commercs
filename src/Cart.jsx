@@ -7,7 +7,7 @@ function Cart({ addToCart, setAddToCart }) {
     const cartItems = addToCart
 
     let SubTotal = addToCart.reduce((acc, item) => acc + item.price, 0)
-    console.log(SubTotal)
+    //console.log(SubTotal)
 
     let shipping = 10
 
