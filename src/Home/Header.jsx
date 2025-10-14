@@ -9,7 +9,7 @@ function Header() {
                 <h1>Latest Arrivals</h1>
                 <h1>SHOP NOW_________</h1> 
             </div>
-            <img src={assets.hero_img} alt="" className="w-full h-[100px]  md:w-full md:h-full   " />
+            <img src={assets.hero_img} alt="" className="w-full h-[300px]  md:w-full md:h-full   " />
         </div>
         </div>
 
