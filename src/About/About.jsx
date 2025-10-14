@@ -6,7 +6,7 @@ function About() {
         <div>
             <div>
                 <h1 className="m-[20px]">ABOUT US________</h1>
-                <div className="flex justify-center items-center gap-[50px] mb-[30px]">
+                <div className="flex justify-center items-center gap-[50px] mb-[30px] sm:flex-col md:flex-row flex-col">
                     <img src={assets.about_img} alt="" className="w-[40%]" />
                     <div className="w-[40%]" >
                         <p>Forever was born out of a passion for innovation and a desire to revolutionize the way people shop online. Our journey began with a simple idea: to provide a platform where customers can easily discover, explore, and purchase a wide range of products from the comfort of their homes.</p>
