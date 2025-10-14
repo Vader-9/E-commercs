@@ -1,4 +1,6 @@
 import { LatestProducts } from "../assets/assets"
+import { Link } from "react-router-dom"
+
 
 function Latest() {
     console.log(LatestProducts)
@@ -12,23 +14,25 @@ function Latest() {
     </p>
 
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 p-4">
-      {LatestProducts.map((item) => (
-        <div
-          key={item.id}
+      {LatestProducts.map((product) => (
+       <Link to={`/Details/${product._id}`}
+              key={product._id}>
+        <div key={product._id}
           className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100 w-[100%] md: w-[20px]"
         >
           <div className="overflow-hidden">
             <img
-              src={item.image}
-              alt={item.name}
+              src={product.image}
+              alt={product.name}
               className="w-full h-48 object-cover transform transition-transform duration-300 hover:scale-105"
             />
           </div>
           <div className="p-3">
-            <p className="font-semibold text-gray-800">{item.name}</p>
-            <p className="text-gray-500">${item.price}</p>
+            <p className="font-semibold text-gray-800">{product.name}</p>
+            <p className="text-gray-500">${product.price}</p>
           </div>
         </div>
+       </Link>
       ))}
     </div>
   </div>
