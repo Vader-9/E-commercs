@@ -5,7 +5,7 @@ import {EllipsisVertical } from 'lucide-react'
 function Nav({ setSearch, addToCart, setActive }) {
 
     return (
-        <div className=' flex items-center gap-[100px] justify-between py-2 font-medium w-full px-4 sm:px-6 md:px-10 md:gap-[150px] '>
+        <div className=' flex items-center gap-[50px] justify-between py-2 font-medium w-full px-4 sm:px-6 md:px-10 md:gap-[150px] '>
             <img src={assets.logo} alt="" className='w-[150px]' />
             <div className='hidden md:flex md:gap-[10px] md:items-center'>
                 <Link to="/">Home</Link>
