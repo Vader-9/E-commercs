@@ -15,7 +15,7 @@ function About() {
                         <p>Our mission at Forever is to empower customers with choice, convenience, and confidence. We're dedicated to providing a seamless shopping experience that exceeds expectations, from browsing and ordering to delivery and beyond.</p>
                     </div>
                 </div>
-                <div>
+                <div className="hidden md:block">
                     <h1>WHY CHOOSE US__________</h1>
                     <div className="flex w-[100%] mt-[30px]">
                         <div className="border w-[33%] p-[50px] h-[250px]">

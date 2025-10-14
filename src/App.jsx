@@ -10,6 +10,7 @@ import Details from "./Collection/Details";
 import Cart from "./Cart";
 import Login from "./Profile";
 import Admin from "./Admin";
+import Sidebar from "./Sidebar";
 
 
 
@@ -17,12 +18,13 @@ function App() {
 
   const [search, setSearch] = useState(false)
   const [addToCart, setAddToCart] = useState([])
+  const [active, setActive] = useState('active')
 
   return (
     <app className ='bg-gray-50'>
       <div className='App'>
         <Router>
-          <Nav setSearch={setSearch} addToCart={addToCart} /> 
+          <Nav setSearch={setSearch} addToCart={addToCart} setActive={setActive} /> 
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="Collection" element={<Collection search={search} setSearch={setSearch} />}/>
@@ -33,6 +35,7 @@ function App() {
               <Route path="Profile" element={<Login/>}/>
               <Route path="Admin" element ={<Admin/>}/>
             </Routes>
+            <Sidebar active={active} setActive={setActive}/>
           <Footer />
         </Router>
       </div>

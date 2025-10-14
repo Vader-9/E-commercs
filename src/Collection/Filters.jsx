@@ -74,7 +74,7 @@ function Filters({ search, setSearch, }) {
     return (
         <div className="px-[100px]">
             {search && (
-  <div className="flex justify-center items-center w-full bg-white shadow-md py-4 px-6 gap-4 rounded-lg m-[10px]  fixed">
+  <div className="flex justify-center items-center w-full bg-white shadow-md py-4 px-6 gap-4 rounded-lg m-[10px] ">
     <input
       type="text"
       value={searchItems}
@@ -93,7 +93,7 @@ function Filters({ search, setSearch, }) {
 )}
 
             <div className="flex gap-[50px]">
-                <div>
+                <div className="hidden md:block">
                     <h1>Filters</h1>
                     <div className="border border-green-600 p-[20px] mt-[40px] mb-[40px] w-[200px] h-[200px] rounded-[30px] ">
                         <h3>CATEGORIES</h3>
@@ -136,12 +136,12 @@ function Filters({ search, setSearch, }) {
                     </div>
                     <div className="bg-gray-50 py-10">
                         <div className="text-center max-w-6xl mx-auto">
-                            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 p-4 justify-center">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 p-4 justify-center">
                                 {displayCloths.map((product) => (
                                     <Link
                                         to={`/Details/${product._id}`}
                                         key={product._id}
-                                        className="bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 overflow-hidden border border-gray-100"
+                                        className="bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 overflow-hidden border border-gray-100 w-[100%]"
                                     >
                                         <div className="overflow-hidden">
                                             <img

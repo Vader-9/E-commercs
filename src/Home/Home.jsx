@@ -7,7 +7,7 @@ import Subcribe from "./Subcribe"
 function Home(){
 
     return(
-        <div>
+        <div className="w-full">
             <Header/>
             <Latest/>
             <Best/>

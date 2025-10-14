@@ -1,0 +1,45 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 250px;
+  height: 100vh;
+  background-color: #ffffff;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  gap: 1.5rem;
+  transition: right 0.3s ease-in-out;
+  z-index: 50;
+}
+
+/* When active */
+.sidebar.active {
+  right: 0;
+}
+
+/* Links inside the sidebar */
+.sidebar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.sidebar a:hover {
+  color: #007bff;
+}
+
+/* Close icon */
+.sidebar svg {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.sidebar svg:hover {
+  transform: rotate(90deg);
+}

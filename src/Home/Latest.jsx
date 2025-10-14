@@ -15,7 +15,7 @@ function Latest() {
       {LatestProducts.map((item) => (
         <div
           key={item.id}
-          className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100"
+          className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100 w-[100%] md: w-[20px]"
         >
           <div className="overflow-hidden">
             <img

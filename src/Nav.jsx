@@ -1,12 +1,13 @@
 import { assets } from './assets/assets'
 import { Link } from "react-router-dom"
+import {EllipsisVertical } from 'lucide-react'
 
-function Nav({ setSearch, addToCart }) {
+function Nav({ setSearch, addToCart, setActive }) {
 
     return (
-        <div className='flex items-center gap-[270px] justify-between py-2 font-medium '>
-            <img src={assets.logo} alt="" />
-            <div className='flex gap-[10px] items-center'>
+        <div className=' flex items-center gap-[270px] justify-between py-2 font-medium w-full px-4 sm:px-6 md:px-10 md:gap-[150px] '>
+            <img src={assets.logo} alt="" className='w-[150px]' />
+            <div className='hidden md:flex md:gap-[10px] md:items-center'>
                 <Link to="/">Home</Link>
                 <Link to='Collection'>Collection</Link>
                 <Link to='About'>About</Link>
@@ -14,7 +15,7 @@ function Nav({ setSearch, addToCart }) {
                 <Link to ="Admin"><button>Admin panel</button></Link>
             </div>
             <div className='flex gap-[10px]'>
-                <Link to= 'Collection'><img src={assets.search_icon} alt="" onClick={()=> setSearch(true)} className="w-8 h-8"  /></Link>
+                <Link to= 'Collection'><img src={assets.search_icon} alt="" onClick={()=> setSearch(true)} className="w-8 h-8 "  /></Link>
                 <Link to = 'Profile'><img src={assets.profile_icon} alt=""  className="w-8 h-8"  /></Link>
                 <Link to='Cart'><div className="relative inline-block">
                     <img src={assets.cart_icon} alt="cart" className="w-8 h-8" />
@@ -25,6 +26,7 @@ function Nav({ setSearch, addToCart }) {
                     )}
                 </div>
                 </Link>
+                <EllipsisVertical className='md:hidden w-8 h-8' onClick={()=>setActive(true)}/>
             </div>
         </div>
     )
