@@ -92,7 +92,7 @@ function Filters({ search, setSearch, }) {
                 </div>
             )}
 
-            <div className="flex gap-[50px]">
+            <div className="flex gap-[50px] ml-[40px] ">
                 <div className="hidden md:block">
                     <h1>Filters</h1>
                     <div className="border border-green-600 p-[20px] mt-[40px] mb-[40px] w-[200px] h-[200px] rounded-[30px] ">
