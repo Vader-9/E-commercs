@@ -31,7 +31,7 @@ useEffect(() => {
 
 
   return (
-    <app className ='bg-gray-50  flex justify-center '>
+    <app className ='bg-gray-50  flex justify-center px-[0px] sm:px-[1px] '>
       <div className="App">
         <Router>
           <Nav setSearch={setSearch} addToCart={addToCart} setActive={setActive} /> 

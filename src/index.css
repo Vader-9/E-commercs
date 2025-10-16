@@ -1,11 +1,2 @@
 @import "tailwindcss";
 
-
-
-App{
-    display: flex;
-    justify-content: center;
-    padding-left: 0px;
-    padding-right: 0px;
-}
-
