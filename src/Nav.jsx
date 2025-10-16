@@ -9,8 +9,8 @@ function Nav({ setSearch, addToCart, setActive }) {
     const [bar, setBar] = useState('Home')
 
     return (
-        <div className=' flex items-center gap-[70px] justify-between py-2 font-medium w-full  sm:px-[1px] sm:gap-[1] sm:px-[1] w-[full] md:px-10 mb-[30px] md:gap-[150px] '>
-            <img src={assets.logo} alt="" className='w-[150px]' />
+        <div className=' flex items-center gap-[10px] justify-between mx-1 mt-1 font-medium w-[100%] mr-[10px] sm:px-[1px] sm:flex sm:justify-center sm:gap-[10px] sm:px-[1] md:px-10 mb-[30px] md:gap-[400px] '>
+            <img src={assets.logo} alt="" className='w-[100px] md:w-[150px]' />
             <div className='hidden md:flex md:gap-[10px] md:items-center'>
                 <Link to="/" onClick={()=>setBar('Home')} className={bar === 'Home' ? 'activeBar' : ''}>Home</Link>
                 <Link to='Collection' onClick={()=>setBar('Collection')} className={bar === 'Collection' ? 'activeBar' : ''}>Collection</Link>
@@ -18,7 +18,7 @@ function Nav({ setSearch, addToCart, setActive }) {
                 <Link to='Contact'onClick={()=>setBar('Contact')} className={bar === 'Contact' ? 'activeBar' : ''}>Contact</Link>
                 <Link to ="Admin"><button className='cursor-pointer text-white rounded-[20px] px-5 py-2 bg-blue-500 '>Login</button></Link>
             </div>
-            <div className='flex gap-[10px] items-center'>
+            <div className='flex gap-[5px] items-center md:gap-[10px]'>
                 <Link to= 'Collection'><img src={assets.search_icon} alt="" onClick={()=> setSearch(true)} className="w-5 h-5 "  /></Link>
                 <Link to = 'Profile'><img src={assets.profile_icon} alt=""  className="w-5 h-5"  /></Link>
                 <Link to='Cart'>
@@ -31,7 +31,7 @@ function Nav({ setSearch, addToCart, setActive }) {
                     )}
                 </div>
                 </Link>
-                <EllipsisVertical className='md:hidden w-5 h-5' onClick={()=>setActive(true)}/>
+                <EllipsisVertical className='md:hidden w-5 h-5 mx-0 px-0' onClick={()=>setActive(true)}/>
             </div>
         </div>
     )
