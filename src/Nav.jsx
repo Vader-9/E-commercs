@@ -9,7 +9,7 @@ function Nav({ setSearch, addToCart, setActive }) {
     const [bar, setBar] = useState('Home')
 
     return (
-        <div className=' flex items-center gap-[10px] justify-between mx-1 mt-1 font-medium w-[100%] mr-[10px] sm:px-[1px] sm:flex sm:justify-center sm:gap-[10px] sm:px-[1] md:px-10 mb-[30px] md:gap-[400px] '>
+        <div className=' flex items-center gap-[10px] justify-between mx-1 mt-2 font-medium w-[100%] mr-[10px] sm:px-[1px] sm:flex sm:justify-center sm:gap-[10px] sm:px-[1] md:px-10 mb-[30px] md:gap-[400px] '>
             <img src={assets.logo} alt="" className='w-[100px] md:w-[150px]' />
             <div className='hidden md:flex md:gap-[10px] md:items-center'>
                 <Link to="/" onClick={()=>setBar('Home')} className={bar === 'Home' ? 'activeBar' : ''}>Home</Link>
