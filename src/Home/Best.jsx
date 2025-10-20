@@ -8,20 +8,20 @@ function Best() {
   // console.log(bestSellers)
 
   return (
-    <div className="flex justify-center py-10 bg-gray-50">
+    <div className="flex justify-center py-10 bg-gray-50 text-center">
       <div className="text-center max-w-6xl">
         <h1 className="text-3xl font-bold mb-2 tracking-wide">BEST SELLERS</h1>
         <p className="text-gray-600 mb-8">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.
         </p>
 
-        <div className="grid grid-cols-2 text-center gap-20 p-2 sm:grid-cols-3 sm:p-[20px] md:grid-cols-4 lg:grid-cols-5 sm:gap-10">
+        <div className="grid grid-cols-2 text-center gap-2 px-5 mx-6  sm:grid-cols-3 sm:p-[20px] md:grid-cols-4 lg:grid-cols-5 sm:gap-10">
           {bestSellers.map((product) => (
             <Link to={`/Details/${product._id}`}
               key={product._id}>
               <div
                 key={product.id}
-                className="bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 overflow-hidden border border-gray-100 w-[200px]"
+                className="bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 overflow-hidden border border-gray-100 w-[100%]"
               >
                 <div className="overflow-hidden">
                   <img
