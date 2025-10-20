@@ -15,7 +15,7 @@ function Best() {
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.
         </p>
 
-        <div className="grid grid-cols-2 justify-center gap-3 p-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 sm:gap-8">
+        <div className="grid grid-cols-2 text-center gap-20 p-2 sm:grid-cols-3 sm:p-[20px] md:grid-cols-4 lg:grid-cols-5 sm:gap-10">
           {bestSellers.map((product) => (
             <Link to={`/Details/${product._id}`}
               key={product._id}>

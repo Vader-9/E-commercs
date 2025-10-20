@@ -1,2 +1,6 @@
 @import "tailwindcss";
 
+.App{
+   max-width: 1900px;
+   text-align: center;
+}
